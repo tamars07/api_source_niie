@@ -13,7 +13,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(logger('dev'));
 
 // set up mongoose
-mongoose.connect('mongodb+srv://tamtran:tam@tran@2020@dgnl-hcmue.8yayn.mongodb.net/myDB?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
+const username = 'tamtran';
+const password = 'tam@tran@2020';
+const cluster = 'dgnl-hcmue.8yayn.mongodb.net';
+const db_name = 'myDB';
+const connectionStr = 'mongodb+srv://' + username + ':' + password + '@' + cluster + '/' + db_name + '?retryWrites=true&w=majority';
+mongoose.connect(connectionStr, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(()=> {
     console.log('Database connected');
   })

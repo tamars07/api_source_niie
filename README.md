@@ -1,6 +1,11 @@
+## Clone source
+git clone https://github.com/tamars07/api_source_niie.git
+
+## Move to working directory
+cd ./api_source_niie
+
 ## Build Setup
 
-``` bash
 # install dependencies
 npm install
 
